@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:8080/api';
+const API_URL = 'https://codesmith-uj5w.onrender.com/api';
 
 const projectNameInput = document.getElementById('projectName');
 const generateBtn = document.getElementById('generateBtn');
