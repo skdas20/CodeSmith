@@ -1,0 +1,97 @@
+CodeSmith Project Structure
+═══════════════════════════════════════════════════════════
+
+CodeSmith/
+│
+├── 📄 pom.xml                           # Maven dependencies
+├── 📄 README.md                         # Project documentation
+├── 📄 QUICK_START.md                    # Quick start guide
+├── 📄 .gitignore                        # Git ignore file
+├── 🚀 run.bat                           # Windows run script
+│
+└── src/
+    └── main/
+        ├── java/com/codesmith/
+        │   │
+        │   ├── 📱 CodeSmithApplication.java          # Main Spring Boot app
+        │   │
+        │   ├── config/
+        │   │   └── 🔧 CorsConfig.java                # CORS configuration
+        │   │
+        │   ├── controller/
+        │   │   └── 🎮 ProjectController.java         # REST API endpoints
+        │   │
+        │   ├── dto/
+        │   │   └── 📦 ProjectRequest.java            # Request DTO
+        │   │
+        │   └── service/
+        │       ├── 🤖 GeminiService.java             # Gemini AI integration
+        │       └── ⚙️  CodeGenerationService.java    # Code generation logic
+        │
+        └── resources/
+            ├── 📝 application.properties             # App configuration
+            │
+            └── static/
+                ├── 🌐 index.html                     # Beautiful UI
+                └── 💻 app.js                         # Frontend logic
+
+
+API Flow
+════════════════════════════════════════════════════════════
+
+User Input (Frontend)
+        ↓
+    app.js (AJAX Request)
+        ↓
+ProjectController (/api/generate)
+        ↓
+CodeGenerationService
+        ↓
+    GeminiService (AI API Calls)
+        ↓
+        ├── Generate Backend Code
+        ├── Generate Frontend Code
+        ├── Generate SRS Document
+        ├── Generate Design Document
+        └── Generate Feasibility Report
+        ↓
+    Create ZIP File
+        ↓
+    Download to User
+
+
+Features
+════════════════════════════════════════════════════════════
+
+✅ Full Stack Code Generation (Spring Boot + HTML/CSS/JS)
+✅ H2 Database Integration
+✅ Complete Documentation (SRS, Design, Feasibility)
+✅ ZIP File Download
+✅ Beautiful Tailwind CSS UI
+✅ Dual API Key Support with Auto-Fallback
+✅ Real-time Generation Status Updates
+✅ Responsive Design
+✅ Error Handling
+
+
+Tech Stack
+════════════════════════════════════════════════════════════
+
+Backend:
+  • Java 17
+  • Spring Boot 3.2.0
+  • Google Gemini AI API
+  • Maven
+
+Frontend:
+  • HTML5
+  • Tailwind CSS
+  • Vanilla JavaScript
+  • Font Awesome Icons
+
+
+Endpoints
+════════════════════════════════════════════════════════════
+
+POST   /api/generate    Generate project ZIP
+GET    /api/health      Health check
